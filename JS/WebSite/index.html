@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>ChartJS with AngularJS</title>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-sanitize.js"></script>
+    <script type="text/javascript" src="js/globalize.min.js"></script>
+    <script type="text/javascript" src="js/dx.chartjs.js"></script>
+
+     <script type="text/javascript" src="js/data.js"></script>
+
+    <script type="text/javascript">
+        angular.module('myApp', ['dx']);
+
+        function MyCtrl($scope, $http, $q) {
+            $scope.pieChartSettings = {
+                dataSource: pieChartDataSource,
+                series: {
+                    argumentField: 'category',
+                    valueField: 'value',
+                    label: {
+                        visible: true,
+                        connector: {
+                            visible: true
+                        }
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    percentPrecision: 2,
+                    customizeText: function (value) {
+                        return value.percentText;
+                    }
+                },
+                title: {
+                    text: 'Continental Population by 2010 (in millions)'
+                },
+                legend: {
+                    horizontalAlignment: 'center',
+                    verticalAlignment: 'bottom'
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+    <div ng-controller="MyCtrl">
+        <div style="width: 100%; height: 600px;" dx-pie-chart="pieChartSettings"></div>
+    </div>
+</body>
+</html>
