@@ -1,4 +1,7 @@
 # How to create dxPieChart using the AngularJS approach
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e5082)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to display data from a data source in dxPieChart created using the AngularJS approach.</p>
