@@ -1,6 +1,6 @@
 # How to create dxPieChart using the AngularJS approach
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e5082)**
+**[[Run Online]](https://codecentral.devexpress.com/e5082/)**
 <!-- run online end -->
 
 
